@@ -1,11 +1,11 @@
-import { Section1 } from './views/section1';
-import { Section2 } from './views/section2';
+import { Section1, Section2, Section3 } from './views';
 
 export const Intro = () => {
   return (
     <>
       <Section1 />
       <Section2 />
+      <Section3 />
     </>
   );
 };
