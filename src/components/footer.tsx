@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
           <p>Historia</p>
         </div>
         <div className="cursor-pointer">
-          <p>Nuestra Boda</p>
+          <p>Detalles</p>
         </div>
       </div>
     </div>

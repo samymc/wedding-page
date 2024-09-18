@@ -1,5 +1,5 @@
 
-export const Wedding = () => {
+export const Details = () => {
   return (
     <>
       

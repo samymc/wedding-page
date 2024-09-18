@@ -27,6 +27,12 @@
   animation: button-animation 0.5s forwards;
 }
 
+.layout{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
 .menuBar {
   display: flex;
   position: fixed;
@@ -86,6 +92,8 @@
 
 .footer {
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   justify-content: space-between;
   padding: 2rem 3rem 4rem 3rem;
   margin-top: 8rem;
