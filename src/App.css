@@ -1,4 +1,4 @@
-@keyframes button-animation{
+@keyframes button-animation {
   50% {
     font-size: 1.1rem;
   }
@@ -23,11 +23,11 @@
     font-weight: 300;
   }
 }
-.button:hover{
+.button:hover {
   animation: button-animation 0.5s forwards;
 }
 
-.layout{
+.layout {
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -36,6 +36,7 @@
 .menuBar {
   display: flex;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   justify-content: flex-end;
@@ -98,4 +99,48 @@
   padding: 2rem 3rem 4rem 3rem;
   margin-top: 8rem;
   background: rgb(232, 230, 230);
+}
+
+.details {
+  margin-top: 10rem;
+  & a {
+    text-decoration: none;
+    color: #a87526;
+  }
+}
+
+/*Slide Component*/
+.slider-container {
+  position: relative;
+  max-width: 80vh;
+  margin: auto;
+  text-align: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-color: #a87526;
+  border: solid;
+  border-width: thin;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #eeddc4;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #a87526;
 }
