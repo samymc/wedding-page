@@ -2,6 +2,7 @@ import { MainMenu, Footer } from './components';
 import './App.css';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Intro, Details, History } from './pages';
+import { Home } from './pages/home';
 
 const Layout = () => {
   const location = useLocation();
@@ -13,7 +14,7 @@ const Layout = () => {
     <div className='layout'>
       {isWrapper && <MainMenu />}
       <Routes>
-        <Route path="/" element={<div />} />
+        <Route path="/" element={<Home />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/history" element={<History />} />
         <Route path="/details" element={<Details />} />

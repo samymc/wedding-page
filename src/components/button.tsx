@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 
-export const Button: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const Button: React.FC<{ type: any, children: ReactNode }> = ({ type, children }) => {
   return (
-    <div className={'button'}>
+    <button type={type}>
       <span>{children}</span>
-    </div>
+    </button>
   );
 };

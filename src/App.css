@@ -8,7 +8,9 @@
   }
 }
 
-.button {
+button {
+  background: white;
+  color: #a87526;
   border-radius: 3rem;
   border-color: #a87526;
   border-style: solid;
@@ -23,7 +25,7 @@
     font-weight: 300;
   }
 }
-.button:hover {
+button:hover {
   animation: button-animation 0.5s forwards;
 }
 
@@ -31,6 +33,7 @@
   width: 100%;
   padding: 0px;
   margin: 0px;
+  height: 100vh;
 }
 
 .menuBar {
@@ -143,4 +146,45 @@
 
 .slider-dot.active {
   background-color: #a87526;
+}
+
+/*Login*/
+
+.login-container {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.captcha-container {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.home {
+  vertical-align: middle;
+  height: 100vh;
 }
