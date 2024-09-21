@@ -8,12 +8,12 @@ export const Login = () => {
   const [error, setError] = useState('');
 
   // Maneja el cambio de la contraseña
-  const handlePasswordChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
   // Maneja el cambio del reCAPTCHA
-  const handleCaptchaChange = (value:any) => {
+  const handleCaptchaChange = (value: any) => {
     if (value) {
       setCaptchaValid(true);
       setError('');
@@ -23,7 +23,7 @@ export const Login = () => {
   };
 
   // Validación y envío del formulario
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     if (!captchaValid) {
@@ -31,7 +31,7 @@ export const Login = () => {
       return;
     }
 
-    if (password === '') {
+    if (password.trim() === '') {
       setError('Por favor, ingresa tu contraseña.');
       return;
     }
@@ -42,10 +42,10 @@ export const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2>Bienvenido</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-group">
-          <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password">Ingrese frase secreta</label>
           <input
             type="password"
             id="password"
@@ -58,14 +58,16 @@ export const Login = () => {
         {/* reCAPTCHA de Google */}
         <div className="captcha-container">
           <ReCAPTCHA
-            sitekey="TU_SITE_KEY_AQUÍ"
+            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
             onChange={handleCaptchaChange}
           />
         </div>
 
         {error && <p className="error">{error}</p>}
 
-        <Button type="submit">Iniciar sesión</Button>
+        <Button buttonProps={{ disabled: !captchaValid, type: 'submit' }}>
+          Iniciar sesión
+        </Button>
       </form>
     </div>
   );

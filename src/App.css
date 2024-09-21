@@ -8,7 +8,7 @@
   }
 }
 
-button {
+.button-able {
   background: white;
   color: #a87526;
   border-radius: 3rem;
@@ -25,7 +25,25 @@ button {
     font-weight: 300;
   }
 }
-button:hover {
+
+.button-disabled {
+  background: rgb(240, 240, 240);
+  color: #707070;
+  border-radius: 3rem;
+  border-color: #707070;
+  border-style: solid;
+  border-width: thin;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  & > span {
+    padding: 1.5rem 4rem;
+    font-family: 'Glacial Indifference', sans-serif;
+    font-weight: 300;
+  }
+}
+
+.button-able:hover {
   animation: button-animation 0.5s forwards;
 }
 

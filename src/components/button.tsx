@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
 
-export const Button: React.FC<{ type: any, children: ReactNode }> = ({ type, children }) => {
+export const Button: React.FC<{ buttonProps: any; children: ReactNode }> = ({
+  buttonProps,
+  children,
+}) => {
   return (
-    <button type={type}>
+    <button className={(buttonProps?.disabled) ? "button-disabled": "button-able"} {...buttonProps}>
       <span>{children}</span>
     </button>
   );
