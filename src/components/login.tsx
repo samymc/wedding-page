@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Button } from './button';
+import { LoginContext } from '../context/loginContext';
 
 export const Login = () => {
   const [password, setPassword] = useState('');
   const [captchaValid, setCaptchaValid] = useState(false);
   const [error, setError] = useState('');
+  const {setIsLogged} = useContext(LoginContext)
 
   // Maneja el cambio de la contraseña
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
+    setError('');
   };
 
   // Maneja el cambio del reCAPTCHA
@@ -25,19 +28,21 @@ export const Login = () => {
   // Validación y envío del formulario
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    const regex = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;
 
     if (!captchaValid) {
       setError('Por favor, completa el reCAPTCHA.');
       return;
     }
 
-    if (password.trim() === '') {
-      setError('Por favor, ingresa tu contraseña.');
+    if (!regex.test(password)) {
+      setError('Por favor, ingresa la frase secreta correctamente.');
       return;
     }
 
-    // Aquí podrías agregar la lógica para enviar la contraseña a tu backend
-    console.log('Contraseña:', password);
+    if(password === "hola"){
+      setIsLogged(true)
+    }
   };
 
   return (

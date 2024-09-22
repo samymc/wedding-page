@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { Login } from '../../components';
+import { useContext} from 'react';
+import { Login, MainLoading } from '../../components';
+import { LoginContext } from '../../context/loginContext';
 
 export const Home = () => {
-  const [isLogged, setIsLogged] = useState<boolean>(false);
+  const {isLogged, setIsLogged} = useContext(LoginContext)
   return (
     <div className="home justify-center flex">
-      {!isLogged ? <Login /> : <></>}
+      {!isLogged ? <Login /> : <MainLoading/>}
     </div>
   );
 };

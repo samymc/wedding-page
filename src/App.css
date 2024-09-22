@@ -169,12 +169,21 @@
 /*Login*/
 
 .login-container {
-  max-width: 300px;
+  max-width: 400px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #deeee4;
   border-radius: 5px;
   text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  & > form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .input-group {
@@ -189,7 +198,7 @@
 .input-group input {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #deeee4;
   border-radius: 4px;
 }
 
@@ -198,7 +207,7 @@
 }
 
 .error {
-  color: red;
+  color: rgb(255, 60, 0);
   margin-top: 10px;
 }
 
@@ -206,3 +215,45 @@
   vertical-align: middle;
   height: 100vh;
 }
+
+/*MainLoading*/
+.loading-wrapper {
+  position: relative;
+  top: 30%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 2s linear infinite;
+}
+
+.central-circle {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: #666;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle.c1 { top: 10%; left: 50%; transform: translate(-50%, -100%); }
+.circle.c2 { top: 30%; left: 87%; transform: translate(-50%, -50%); }
+.circle.c3 { top: 70%; left: 87%; transform: translate(-50%, -50%); }
+.circle.c4 { top: 90%; left: 50%; transform: translate(-50%, 0); }
+.circle.c5 { top: 70%; left: 13%; transform: translate(-50%, -50%); }
+.circle.c6 { top: 30%; left: 13%; transform: translate(-50%, -50%); }
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
