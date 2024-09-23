@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import image1 from "../assets/1.jpg"
-import image2 from "../assets/2.jpg"
+import image1 from "../assets/img/1.jpg"
+import image2 from "../assets/img/2.jpg"
 
 const ImageSlider = () => {
   const [currentImage, setCurrentImage] = useState(0);
