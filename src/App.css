@@ -70,6 +70,18 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+    align-items: center;
+    & .icon-play {
+      padding: 2px 2px 5px 5px;
+      height: 1rem;
+      width: 1rem;
+    }
+    & .icon-play:hover {
+      padding: 2px 2px 5px 5px;
+      border-style: solid;
+      border-radius: 5px;
+      border-width: thin;
+    }
   }
   & > div > p {
     padding: 1rem;
@@ -87,12 +99,13 @@
   margin-left: 2rem;
   height: 750px;
   position: relative;
+  min-width: 540px;
   & img {
     width: 100%;
     height: 100%;
   }
 }
-.intro{
+.intro {
   margin: 0 3rem 0 3rem;
 }
 
@@ -111,14 +124,14 @@
   & .info {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0 0 0;
+    padding: 2rem 6rem 0 0;
     font-size: 1.2rem;
   }
 }
 
 .intro-section3 {
   padding: 6rem 1rem 0 1rem;
-  & h1{
+  & h1 {
     font-size: 5.5rem;
   }
 
@@ -140,7 +153,6 @@
 }
 
 .details {
-  margin-top: 10rem;
   & a {
     text-decoration: none;
     color: #a87526;
@@ -314,5 +326,22 @@
   top: 65%;
   & h1 {
     font-size: 2.5rem;
+  }
+}
+
+.copy {
+  font-family: 'Glacial Indifference', sans-serif;
+}
+
+.back-button{
+  cursor: pointer;
+  display: flex;
+  padding-left: 2rem;
+  font-family: 'Glacial Indifference', sans-serif;
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
   }
 }
