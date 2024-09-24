@@ -1,4 +1,5 @@
 import { Button } from '../../../components';
+import image1 from '../../../assets/img/img1.png';
 
 export const Section1: React.FC = () => {
   return (
@@ -10,11 +11,13 @@ export const Section1: React.FC = () => {
           <p>Sábado, 23 de nov 2024</p>
           <p>{'Parroquia santa beatriz (Av. Militar 1812, Lince 15046)'}</p>
         </div>
-        <div className='flex'>
+        <div className="flex">
           <Button>Detalles</Button>
         </div>
       </div>
-      <div>{'image 1'}</div>
+      <div className='image-box'>
+        <img src={image1} alt="Image1" />
+      </div>
     </div>
   );
 };

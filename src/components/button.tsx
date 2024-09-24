@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export const Button: React.FC<{ buttonProps: any; children: ReactNode }> = ({
+export const Button: React.FC<{ buttonProps?: any; children?: ReactNode }> = ({
   buttonProps,
   children,
 }) => {
