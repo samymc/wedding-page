@@ -9,7 +9,7 @@ export const Details = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLogged) {
-      navigate('/');
+      navigate('/wedding-page/');
     }
   }, []);
   return (
