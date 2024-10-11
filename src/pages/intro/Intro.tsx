@@ -8,7 +8,7 @@ export const Intro = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLogged) {
-      navigate('/wedding-page/');
+      navigate('/wedding-page');
     }
   }, []);
   return (
