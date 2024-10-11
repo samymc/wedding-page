@@ -40,7 +40,7 @@ export const Login = () => {
       return;
     }
 
-    if(password === "hola"){
+    if(password === "AlojomorA"){
       setIsLogged(true)
     }
   };

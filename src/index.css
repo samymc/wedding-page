@@ -130,3 +130,16 @@ h3 {
 .cursor-pointer{
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  h1 {
+    font-family: 'Brittany Signature', sans-serif;
+    font-size: 3rem !important;
+    font-weight: 300;
+  }
+  h3 {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
