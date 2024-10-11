@@ -5,7 +5,7 @@ export const Section1 = () => {
   return (
     <>
       <div className={'flex justify-center'}>
-        <h3>Nuestra invitación</h3>
+        <h3>Nuestra Invitación</h3>
       </div>
       <ImageSlider />
       <div className="flex justify-center mt-2">
