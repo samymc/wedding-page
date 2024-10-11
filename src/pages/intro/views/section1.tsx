@@ -14,7 +14,7 @@ export const Section1: React.FC = () => {
           <p>{'Parroquia Santa Beatriz'}</p>
         </div>
         <div className="flex mt-4">
-          <Button buttonProps={{onClick:()=>navigate("/details")}}>Detalles</Button>
+          <Button buttonProps={{onClick:()=>navigate("/wedding-page/details")}}>Detalles</Button>
         </div>
       </div>
       <div className='image-box'>
