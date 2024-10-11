@@ -14,7 +14,7 @@ export const Details = () => {
   }, []);
   return (
     <div className="details mt-6">
-      <BackButton onClick={()=>{navigate("/intro")}}/>
+      <BackButton onClick={()=>{navigate("/wedding-page/intro")}}/>
       <Section1 />
     </div>
   );

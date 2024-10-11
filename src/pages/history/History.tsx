@@ -16,7 +16,7 @@ export const History = () => {
     <div className="mt-6 history">
       <BackButton
         onClick={() => {
-          navigate("/intro");
+          navigate("/wedding-page/intro");
         }}
       />
       <div className={'flex justify-center'}>
