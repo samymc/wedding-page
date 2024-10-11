@@ -34,14 +34,14 @@ export const MainMenu: React.FC = () => {
       </div>
       <div
         onClick={() => {
-          navigate('/wedding-page/history');
+          navigate('/history');
         }}
       >
         <p>Historia</p>
       </div>
       <div
         onClick={() => {
-          navigate('/wedding-page/details');
+          navigate('/details');
         }}
       >
         <p>Detalles</p>

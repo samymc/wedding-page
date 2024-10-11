@@ -8,7 +8,7 @@ export const MainLoading = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate('/wedding-page/intro');
+      navigate('/intro');
     }, 4000);
     return () => clearTimeout(timer);
   }, [navigate]);

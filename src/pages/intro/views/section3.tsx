@@ -11,7 +11,7 @@ export const Section3: React.FC = () => {
       </div>
       <div className="flex justify-center mt-2">
         <div>
-        <Button buttonProps={{onClick:()=>navigate("/wedding-page/details")}}>Detalles</Button>
+        <Button buttonProps={{onClick:()=>navigate("/details")}}>Detalles</Button>
         </div>
       </div>
     </div>

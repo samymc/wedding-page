@@ -9,14 +9,14 @@ export const History = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLogged) {
-      navigate('/wedding-page');
+      navigate('/');
     }
   }, []);
   return (
     <div className="mt-6 history">
       <BackButton
         onClick={() => {
-          navigate("/wedding-page/intro");
+          navigate("/intro");
         }}
       />
       <div className={'flex justify-center'}>

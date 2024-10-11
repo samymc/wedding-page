@@ -9,12 +9,12 @@ export const Details = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLogged) {
-      navigate('/wedding-page');
+      navigate('/');
     }
   }, []);
   return (
     <div className="details mt-6">
-      <BackButton onClick={()=>{navigate("/wedding-page/intro")}}/>
+      <BackButton onClick={()=>{navigate("/intro")}}/>
       <Section1 />
     </div>
   );

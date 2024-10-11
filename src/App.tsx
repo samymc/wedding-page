@@ -8,18 +8,18 @@ import { LoginProvider } from './context/loginContext';
 const Layout = () => {
   const location = useLocation();
   const isWrapper =
-    location.pathname === '/wedding-page/intro' ||
-    location.pathname === '/wedding-page/history' ||
-    location.pathname === '/wedding-page/details';
+    location.pathname === '/intro' ||
+    location.pathname === '/history' ||
+    location.pathname === '/details';
   return (
     <LoginProvider>
       <div className="layout">
         {isWrapper && <MainMenu />}
         <Routes>
-          <Route path="/wedding-page/" element={<Home />} />
-          <Route path="/wedding-page/intro" element={<Intro />} />
-          <Route path="/wedding-page/history" element={<History />} />
-          <Route path="/wedding-page/details" element={<Details />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/intro" element={<Intro />} />
+          <Route path="/history" element={<History />} />
+          <Route path="/details" element={<Details />} />
           <Route path="*" element={<h1>Recurso No Encontrado</h1>} />
         </Routes>
         {isWrapper && <Footer />}
