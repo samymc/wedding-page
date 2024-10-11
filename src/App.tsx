@@ -20,7 +20,7 @@ const Layout = () => {
           <Route path="/wedding-page/intro" element={<Intro />} />
           <Route path="/wedding-page/history" element={<History />} />
           <Route path="/wedding-page/details" element={<Details />} />
-          <Route path="*" element={<h1>Recurso No encontrado</h1>} />
+          <Route path="*" element={<h1>Recurso No Encontrado</h1>} />
         </Routes>
         {isWrapper && <Footer />}
       </div>
