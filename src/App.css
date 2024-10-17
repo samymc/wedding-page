@@ -96,7 +96,6 @@
 }
 
 .image-box {
-  margin-left: 2rem;
   height: 750px;
   position: relative;
   min-width: 540px;
@@ -105,6 +104,13 @@
     height: 100%;
   }
 }
+
+.detail-box{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .intro {
   margin: 0 3rem 0 3rem;
 }
@@ -123,7 +129,7 @@
   padding: 6rem 1rem 0 1rem;
   & .info {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     padding: 2rem 6rem 0 0;
     font-size: 1.2rem;
   }

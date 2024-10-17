@@ -2,12 +2,17 @@ import React, { useContext, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Button } from './button';
 import { LoginContext } from '../context/loginContext';
+import { dev_key, prod_host, prod_key } from '../utils/utils';
 
 export const Login = () => {
   const [password, setPassword] = useState('');
   const [captchaValid, setCaptchaValid] = useState(false);
   const [error, setError] = useState('');
-  const {setIsLogged} = useContext(LoginContext)
+  const { setIsLogged } = useContext(LoginContext);
+
+  const location = window.location.hostname;
+
+  const key = location === prod_host ? prod_key : dev_key;
 
   // Maneja el cambio de la contraseña
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,8 +45,8 @@ export const Login = () => {
       return;
     }
 
-    if(password === "AlojomorA"){
-      setIsLogged(true)
+    if (password === 'AlojomorA') {
+      setIsLogged(true);
     }
   };
 
@@ -62,10 +67,7 @@ export const Login = () => {
 
         {/* reCAPTCHA de Google */}
         <div className="captcha-container">
-          <ReCAPTCHA
-            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-            onChange={handleCaptchaChange}
-          />
+          <ReCAPTCHA sitekey={key} onChange={handleCaptchaChange} />
         </div>
 
         {error && <p className="error">{error}</p>}

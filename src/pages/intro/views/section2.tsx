@@ -11,7 +11,7 @@ export const Section2: React.FC = () => {
         <div className="image-box">
           <img src={image2} alt="Image 2" />
         </div>
-        <div>
+        <div className="detail-box">
           <ul>
             <li>
               <h3>Ceremonia: 4pm</h3>
