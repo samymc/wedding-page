@@ -10,9 +10,9 @@ export const Login = () => {
   const [error, setError] = useState('');
   const { setIsLogged } = useContext(LoginContext);
 
-  const host = window.location.hostname;
+  const hostname = window.location.hostname;
 
-  const key = host === prod_host ? prod_key : dev_key;
+  const key = hostname === prod_host ? prod_key : dev_key;
 
   // Maneja el cambio de la contraseña
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
